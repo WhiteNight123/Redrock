@@ -43,7 +43,6 @@ public class RedrockLv1 {
                     }
                 }
 
-
             }
             System.out.println();
 
