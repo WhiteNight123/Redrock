@@ -1,12 +1,12 @@
 package com.redrock.homework.two.wangzherongyao;
+
 //父类
-public class Character {
+public class Character implements FightInterface {
     protected String name;
     protected int hp;
     protected double atk;
     protected double def;
     protected int damage;
-
 
     public Character(String name, int hp, double atk, double def) {
         this.name = name;
@@ -15,10 +15,10 @@ public class Character {
         this.def = def;
     }
 
-
-    public int getDamage(){
+    public int getDamage() {
         return damage;
     }
+
     public Character() {
     }
 
@@ -38,7 +38,6 @@ public class Character {
         this.hp = hp;
     }
 
-
     public double getAtk() {
         return atk;
     }
@@ -53,5 +52,30 @@ public class Character {
 
     public void setDef(double def) {
         this.def = def;
+    }
+
+    //打印血量
+    public void print(Character[] c1) {
+        for (int i = 0; i < c1.length; i++) {
+            System.out.println(i + "." + c1[i].getName() + "血量:" + c1[i].getHp());
+        }
+    }
+
+    public void attack(FightInterface fi, Character c1, Character[] c2) {
+    }
+
+    @Override
+    public void attacked(int damage, FightInterface fi, boolean loop, Character c1, Character[] c2, int index) {
+
+    }
+
+    @Override
+    public void skill(Character c1) {
+
+    }
+
+    @Override
+    public void equip(FightInterface fi, Hero hero) {
+
     }
 }
