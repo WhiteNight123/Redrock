@@ -47,13 +47,13 @@ public class Hero extends Character {
         System.out.println("-------------");
         System.out.print("请选择你要攻击的小兵:");
         int index = sc.nextInt();
-        fi = (FightInterface) c2[index];
+        fi = c2[index];
         if (c2[index].getHp() > 0) {
             fi.attacked(damage, this, true, c1, c2, index);
         } else {
             c2[index].setHp(0);
             System.out.println(c2[index].getName() + "已阵亡");
-            fi = (FightInterface) c1;
+            fi = c1;
             hero = (Hero) c1;
             hero.attack(fi, c1, c2);
         }
