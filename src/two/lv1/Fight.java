@@ -1,10 +1,11 @@
 package two.lv1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Fight {
     public void start() {
-        Scanner sc = new Scanner(System.in);
+
         System.out.println("欢迎来到王者荣耀");
         Hero hero = new Hero();
         hero.start(); //初始化英雄
@@ -24,13 +25,15 @@ public class Fight {
 
         System.out.println("请选择你的装备:");
         equipments[0].print(equipments); //展示装备
-        int index = sc.nextInt();
+
+        int index = InputException.getIndex();
         FightInterface eq = equipments[index];
         equipments[index].equip(eq, hero); //穿上装备
 
         System.out.println("全军出击...");
         FightInterface fi = soldiers[0]; //随便引用一下
         hero.attack(fi, hero, soldiers); //英雄先攻击小兵
-
     }
+
+
 }

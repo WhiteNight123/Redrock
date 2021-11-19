@@ -75,29 +75,18 @@ public class Hero extends Character {
     }
 
     public void setName() {
-        while (true) {
-            System.out.print("请输入名称(20个字符):");
-            String name = sc.next();
-            if (name.length() <= 20) {
-                this.name = name;
-                break;
-            } else {
-                System.out.println("名字不合要求...");
-            }
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+        System.out.println("请输入名称(10字符):");
+        this.name=InputException.setName();
     }
 
     public void setHp() {
-        while (true) {
-            System.out.print("请输入血量(1-9999):");
-            int hp = sc.nextInt();
-            if (hp > 0 && hp < 10000) {
-                this.hp = hp;
-                break;
-            } else {
-                System.out.println("血量不合要求...");
-            }
-        }
+        System.out.print("请输入血量(1-9999):");
+        this.hp=InputException.setHp();
     }
 
     public void setAtk() {
