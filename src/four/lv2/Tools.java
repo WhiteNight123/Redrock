@@ -8,10 +8,11 @@ public class Tools {
         File file = new File(filePath);
         file.createNewFile();
     }
+
     //返回文件的大小
     public static void getLength(String filePath) {
         File file = new File(filePath);
-        System.out.println("大小:"+file.length()+"字节");
+        System.out.println("大小:" + file.length() + "字节");
     }
 
     //向文件写入数据
