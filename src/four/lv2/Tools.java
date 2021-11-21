@@ -26,7 +26,7 @@ public class Tools {
         reader = new FileReader(file);
         int len = 0;
         char[] c = new char[1024];
-        int temp = 0;
+        int temp;
         while ((temp = reader.read()) != -1) {
             c[len] = (char) temp;
             len++;
